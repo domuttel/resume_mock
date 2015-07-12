@@ -1,5 +1,5 @@
 body {
-  background-color: pink;
+  background-color: #B25A34;
   font-family: 'Titillium Web', sans-serif;
 }
 
@@ -7,9 +7,12 @@ h1, h2 {
   font-family: 'Titillium Web', sans-serif;
 }
 
+h2 {
+  color: #50FFF6;
+}
 #heading {
   font-size: 4em;
-  color: pink;
+  color: #00BBB0;
 }
 
 .lead {
@@ -19,6 +22,5 @@ h1, h2 {
 .container {
   padding: 50px;
   max-width: 800px;
-  background-color: black;
+  background-color: #FFF2EB;
 }
-

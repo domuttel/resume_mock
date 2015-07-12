@@ -1,12 +1,6 @@
-Developed in conjunction with [Thinkful](http://thinkful.com).
+# Creating an Online Resume: An Introduction to HTML and CSS
 
-![thinkful](https://raw.github.com/mjhea0/thinkful-html/master/logo.png)
-
-Come code along with me! Sign up [here](http://www.thinkful.com/a/mentorship-preview).
-
-<hr>
-
-# Introduction to HTML and CSS
+![resume](https://raw.github.com/mjhea0/thinkful-html/master/resume/images/resume2.png)
 
 Websites are made up of many things, but HTML (Hyper Text Markup Language) and CSS (Cascading Style Sheets) are two of the most important components. Together, they are the building blocks for every single webpage on the Internet.
 
@@ -53,30 +47,30 @@ Let's add four tags:
 
 1. title `<title>`
 2. heading `<h1>`
-3. img `<img>`
-4. break `<br>`
+3. paragraph `<p>`
+4. img `<img>`
+5. break `<br>`
 
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>My bumblebee website</title>
+    <title>Resume: Darth Vader, Lord of the Sith</title>
   </head>
   <body>
-    <h1 id="my-header">Bees!</h1>
-    <p>
-      <br/>
-      <img src="http://farm4.staticflickr.com/3775/12059206813_e37135c9cf_z.jpg" width="240" height="180"/>
-      <br>
-    </p>
+    <h1 id="heading">Darth Vader</h1>
+    <p>Lord of the Sith</p>
+    <br/>
+    <img src="http://upload.wikimedia.org/wikipedia/en/7/76/Darth_Vader.jpg">
+    <br>
   </body>
 </html>
 ```
 
 Open the page in Chrome; it should look like this:
 
-![html](/images/index1.png)
+![resume1](https://raw.github.com/mjhea0/thinkful-html/master/resume/images/resume1.png)
 
 
 ### Elements, Tags, and Attributes
@@ -85,9 +79,8 @@ Open the page in Chrome; it should look like this:
   - Title: `<title>` displays the title in the browser toolbar. It's also used for the title when its added to your browser's favorites and the title of your page for search engine results.
   - Headings: These include the `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` and `<h6>` tags. `<h1>` is the main heading and the remaining headings decrease in size, with `<h6>` being the smallest. It's best practice to use the `<h1>` tag once per page, while the other tags can be used any number of times, but they should always be in order. In other words, `<h3>` should be a sub-heading of `<h2>` and `<h4>` should be a sub-heading of `<h3>`. Can you recognize the header in the HTML. 
   - Some tags, like the `<img>` (image) and `<br>` (line break) tags do not require a closing tag. Notice how I included one `<br>` tag with a `/` on the end. This was a best practice in previous versions of HTML. HTML5, on the other hand - the version we are using - is much more relaxed and does not require a `/`, but it will work fine with it as well. It's really the developer's preference.
-2. Elements represent the tags as well as whatever falls between the opening and closing tags, like - `<title>My bumblebee website</title>`
-3. Attributes (sometimes referred to as selectors) are used to select the tag for some purpose. In our case we are going to use them for defining styles, when we get to CSS. Selectors in most cases are either `id`s or `class`es. In the above example, notice the id `my-header`, which is associated with the `<h1>` tag. We'll look more at this later. Further, we also use the attributes `width="240"` and  `height="180"`. These are defined using attributes directly within the HTML, or you can also place them in the CSS stylesheet. Again, more on this later.
-
+2. Elements represent the tags as well as whatever falls between the opening and closing tags, like - `<title>Resume: Darth Vader, Lord of the Sith</title>`
+3. Attributes (sometimes referred to as selectors) are used to select the tag for some purpose. In our case we are going to use them for defining styles, when we get to CSS. Selectors in most cases are either `id`s or `class`es. In the above example, notice the id `header`, which is associated with the `<h1>` tag. We'll look more at this later.
 
 ### Additional Tags
 
@@ -100,10 +93,10 @@ Let's add all the tags that were discussed.
 #### Headings
 
 ```html
-<h2>Wonder, wonderful bumblebees</h2>
-<h2>About the Bumblebee</h2>
-<h2>Types of Bees:</h2>
-<h3>(From <a href="http://en.wikipedia.org/wiki/Bumblebee">Wikipedia)</a></h3>
+<h2>History and Profile</h2>
+<h2>Education</h2>
+<h2>Work History</h2>
+<h2>Skillset</h2>
 ```
 
 Updated code:
@@ -112,20 +105,18 @@ Updated code:
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My bumblebee website</title>
+    <title>Resume: Darth Vader, Lord of the Sith</title>
   </head>
   <body>
-    <h1 id="my-header">Bees!</h1>
-    <h2>Wonder, wonderful bumblebees</h2>
-    <p>
-      <br/>
-      <img src="http://farm4.staticflickr.com/3775/12059206813_e37135c9cf_z.jpg" width="240" height="180"/>
-      <br>
-    </p>
-    <h2>About the Bumblebee</h2>
-      <h3>(From <a href="http://en.wikipedia.org/wiki/Bumblebee">Wikipedia)</a></h3>
+    <h1 id="heading">Darth Vader</h1>
+    <p>Lord of the Sith</p>
+    <br/>
+    <img src="http://upload.wikimedia.org/wikipedia/en/7/76/Darth_Vader.jpg">
     <br>
-    <h2>Types of Bees:</h2>
+    <h2>History and Profile</h2>
+    <h2>Education</h2>
+    <h2>Work History</h2>
+    <h2>Skillset</h2>
   </body>
 </html>
 ```
@@ -135,7 +126,7 @@ Updated code:
 Paragraphs: The `<p>` tag is used for splitting content literally into separate paragraphs. Each new `<p>` tag will appear on a new line.
 
 ```html
-<p>A bumblebee is any member of the bee genus Bombus, in the family Apidae. There are over 250 known species, existing primarily in the Northern Hemisphere although they also occur in South America. They have been introduced to New Zealand and the Australian state of Tasmania.</p>
+<p>I am a fearsome cyborg with extensive experience gained as the supreme commander of the Galactic Empire. I successfully delivered the largest strategic initiative within the Star Wars universe, working in partnership with Emperor Palpatine and other key stakeholders to bring the project in on time and within budget, twice because of that cursed rebellion. With a powerful bass voice, imposing body armour and signature respiratory breathing, I am able to use my influence at all levels, whether leading Imperial subordinates, devastating estranged family members, or crushing the Rebel Alliance.</p>
 ```
 
 Updated code:
@@ -144,35 +135,65 @@ Updated code:
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My bumblebee website</title>
+    <title>Resume: Darth Vader, Lord of the Sith</title>
   </head>
   <body>
-    <h1 id="my-header">Bees!</h1>
-    <h2>Wonder, wonderful bumblebees</h2>
-    <p>
-      <br/>
-      <img src="http://farm4.staticflickr.com/3775/12059206813_e37135c9cf_z.jpg" width="240" height="180"/>
-      <br>
-    </p>
-    <h2>About the Bumblebee</h2>
-      <h3>(From <a href="http://en.wikipedia.org/wiki/Bumblebee">Wikipedia)</a></h3>
-      <p>A bumblebee is any member of the bee genus Bombus, in the family Apidae. There are over 250 known species, existing primarily in the Northern Hemisphere although they also occur in South America. They have been introduced to New Zealand and the Australian state of Tasmania.</p>
+    <h1 id="heading">Darth Vader</h1>
+    <p>Lord of the Sith</p>
+    <br/>
+    <img src="http://upload.wikimedia.org/wikipedia/en/7/76/Darth_Vader.jpg">
     <br>
-    <h2>Types of Bees:</h2>
+    <h2>History and Profile</h2>
+    <p>I am a fearsome cyborg with extensive experience gained as the supreme commander of the Galactic Empire. I successfully delivered the largest strategic initiative within the Star Wars universe, working in partnership with Emperor Palpatine and other key stakeholders to bring the project in on time and within budget, twice because of that cursed rebellion. With a powerful bass voice, imposing body armor and signature respiratory breathing, I am able to use my influence at all levels, whether leading Imperial subordinates, devastating estranged family members, or crushing the Rebel Alliance.</p>
+    <h2>Education</h2>
+    <h2>Work History</h2>
+    <h2>Skillset</h2>
   </body>
 </html>
 ```
 
-#### Ordered Lists
+#### Unordered Lists
 
 ```html
-<ol>
-  <li>Southern plains bumblebee</li>
-  <li>New garden bumblebee</li>
-  <li>Early bumblebee</li>
-  <li>Orange-belted bumblebee</li>
-  <li>Buff-tailed bumblebee or large earth bumblebee</li>
-</ol>
+<ul>
+  <li>Imperial Palace, 000-001</li>
+  <li>Hololink: 655321-666</li>
+  <li>lordvader@gmail.com</li>
+</ul>
+```
+
+and
+
+```html
+<ul>
+  <li>Jedi Academy, Master warrior-monk and basket weaving</li>
+  <li>Obi-Wan Kenobi School of Training, Jedi Training</li>
+</ul>
+```
+
+and
+
+```html
+<ul>
+  <li>His Excellency Palpatine I, Emperor of the Galaxy - Major General</li>
+  <li>The Jedi Order - Liaison to the Supreme Chancellor</li>
+  <li>Watto's Junk Dealership - electronics repair</li>
+</ul>
+```
+
+and
+
+```html
+<ul>
+  <li>Oppressing the Galaxy</li>
+  <li>Great Physical Strength</li>
+  <li>Mastery of the Force</li>
+  <li>Lightsaber Duels</li>
+  <li>Team Leadership</li>
+  <li>Imperial Weapons Research</li>
+  <li>Ruby Scripting Ninja</li>
+  <li>Master pick-pocketter</li>
+</ul>
 ```
 
 Updated code:
@@ -181,57 +202,71 @@ Updated code:
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My bumblebee website</title>
+    <title>Resume: Darth Vader, Lord of the Sith</title>
   </head>
   <body>
-    <h1 id="my-header">Bees!</h1>
-    <h2>Wonder, wonderful bumblebees</h2>
-    <p>
-      <br/>
-      <img src="http://farm4.staticflickr.com/3775/12059206813_e37135c9cf_z.jpg" width="240" height="180"/>
-      <br>
-    </p>
-    <h2>About the Bumblebee</h2>
-      <h3>(From <a href="http://en.wikipedia.org/wiki/Bumblebee">Wikipedia)</a></h3>
-      <p>A bumblebee is any member of the bee genus Bombus, in the family Apidae. There are over 250 known species, existing primarily in the Northern Hemisphere although they also occur in South America. They have been introduced to New Zealand and the Australian state of Tasmania.</p>
+    <h1 id="heading">Darth Vader</h1>
+    <p>Lord of the Sith</p>
+    <ul>
+      <li>Imperial Palace, 000-001</li>
+      <li>Hololink: 655321-666</li>
+      <li>lordvader@gmail.com</li>
+    </ul>
+    <br/>
+    <img src="http://upload.wikimedia.org/wikipedia/en/7/76/Darth_Vader.jpg">
     <br>
-    <h2>Types of Bees:</h2>
-      <ol>
-        <li>Southern plains bumblebee</li>
-        <li>New garden bumblebee</li>
-        <li>Early bumblebee</li>
-        <li>Orange-belted bumblebee</li>
-        <li>Buff-tailed bumblebee or large earth bumblebee</li>
-      </ol>
+    <h2>History and Profile</h2>
+    <p>I am a fearsome cyborg with extensive experience gained as the supreme commander of the Galactic Empire. I successfully delivered the largest strategic initiative within the Star Wars universe, working in partnership with Emperor Palpatine and other key stakeholders to bring the project in on time and within budget, twice because of that cursed rebellion. With a powerful bass voice, imposing body armour and signature respiratory breathing, I am able to use my influence at all levels, whether leading Imperial subordinates, devastating estranged family members, or crushing the Rebel Alliance.</p>
+    <h2>Education</h2>
+    <ul>
+      <li>Jedi Academy, Master warrior-monk and basket weaving</li>
+      <li>Obi-Wan Kenobi School of Training, Jedi Training</li>
+    </ul>
+    <h2>Work History</h2>
+    <ul>
+      <li>His Excellency Palpatine I, Emperor of the Galaxy - Major General</li>
+      <li>The Jedi Order - Liaison to the Supreme Chancellor</li>
+      <li>Watto's Junk Dealership - electronics repair</li>
+    </ul>
+    <h2>Skillset</h2>
+    <ul>
+      <li>Oppressing the Galaxy</li>
+      <li>Great Physical Strength</li>
+      <li>Mastery of the Force</li>
+      <li>Lightsaber Duels</li>
+      <li>Team Leadership</li>
+      <li>Imperial Weapons Research</li>
+      <li>Ruby Scripting Ninja</li>
+      <li>Master pick-pocketter</li>
+    </ul>
   </body>
 </html>
 ```
 
-Check it out in your browser. Add some more elements, or let's move on to CSS so we can make the site look better.
+Check it out in your browser. Add some more elements. Or: jump right to CSS ...
 
-On to CSS ..
 
 ## CSS
 
 While HTML provides, structure, CSS is used for styling, making webpages look nice. From the size of the text to the background colors to the positioning of HTML elements, CSS gives you control over almost every visual aspect of a page.
 
 
-CSS and HTML work in tandem. CSS styles (or rules) are applied directly to HTML elements. For example, remember this element from above - `<h1 id="my-header">Bees!</h1>`. Well, since there is an `id` selector associated with it, we can assign CSS styles to it using an external stylesheet.
+CSS and HTML work in tandem. CSS styles (or rules) are applied directly to HTML elements. For example, remember this element from above - `<h1 id="heading">Darth Vader</h1>`. Well, since there is an `id` selector associated with it, we can assign CSS styles to it using an external stylesheet.
 
 ```css
-#my-header {
-  color: #660000;
+#heading {
+  color: pink;
 }
 ```
 
-**Save this as "styles.css".**
+**Save this as "main.css".**
 
 > There are three ways that you can assign styles to HTML tags. Inline. Internal. Or External. Inline styles are placed directly in the tag; these should be avoided, though, as it's best practice to keep HTML and CSS styles separated (don't mix structure with presentation!). Internal styles fall within the head of a website. Again, these should be avoided as well due to reasons mentioned before. Read more about this [here](http://www.w3schools.com/css/css_howto.asp).
 
 Next, we need to "link" our HTML page and CSS stylesheet. To do so, add the following code to the `<head>` section of the HTML page just below the title:
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="main.css">
 ```
 
 Your code should now look like this:
@@ -240,36 +275,51 @@ Your code should now look like this:
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My bumblebee website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Resume: Darth Vader, Lord of the Sith</title>
   </head>
   <body>
-    <h1 id="my-header">Bees!</h1>
-    <h2>Wonder, wonderful bumblebees</h2>
-    <p>
-      <br/>
-      <img src="http://farm4.staticflickr.com/3775/12059206813_e37135c9cf_z.jpg" width="240" height="180"/>
-      <br>
-    </p>
-    <h2>About the Bumblebee</h2>
-      <h3>(From <a href="http://en.wikipedia.org/wiki/Bumblebee">Wikipedia)</a></h3>
-      <p>A bumblebee is any member of the bee genus Bombus, in the family Apidae. There are over 250 known species, existing primarily in the Northern Hemisphere although they also occur in South America. They have been introduced to New Zealand and the Australian state of Tasmania.</p>
+    <h1 id="heading">Darth Vader</h1>
+    <p>Lord of the Sith</p>
+    <ul>
+      <li>Imperial Palace, 000-001</li>
+      <li>Hololink: 655321-666</li>
+      <li>lordvader@gmail.com</li>
+    </ul>
+    <br/>
+    <img src="http://upload.wikimedia.org/wikipedia/en/7/76/Darth_Vader.jpg">
     <br>
-    <h2>Types of Bees:</h2>
-      <ol>
-        <li>Southern plains bumblebee</li>
-        <li>New garden bumblebee</li>
-        <li>Early bumblebee</li>
-        <li>Orange-belted bumblebee</li>
-        <li>Buff-tailed bumblebee or large earth bumblebee</li>
-      </ol>
+    <h2>History and Profile</h2>
+    <p>I am a fearsome cyborg with extensive experience gained as the supreme commander of the Galactic Empire. I successfully delivered the largest strategic initiative within the Star Wars universe, working in partnership with Emperor Palpatine and other key stakeholders to bring the project in on time and within budget, twice because of that cursed rebellion. With a powerful bass voice, imposing body armour and signature respiratory breathing, I am able to use my influence at all levels, whether leading Imperial subordinates, devastating estranged family members, or crushing the Rebel Alliance.</p>
+    <h2>Education</h2>
+    <ul>
+      <li>Jedi Academy, Master warrior-monk and basket weaving</li>
+      <li>Obi-Wan Kenobi School of Training, Jedi Training</li>
+    </ul>
+    <h2>Work History</h2>
+    <ul>
+      <li>His Excellency Palpatine I, Emperor of the Galaxy - Major General</li>
+      <li>The Jedi Order - Liaison to the Supreme Chancellor</li>
+      <li>Watto's Junk Dealership - electronics repair</li>
+    </ul>
+    <h2>Skillset</h2>
+    <ul>
+      <li>Oppressing the Galaxy</li>
+      <li>Great Physical Strength</li>
+      <li>Mastery of the Force</li>
+      <li>Lightsaber Duels</li>
+      <li>Team Leadership</li>
+      <li>Imperial Weapons Research</li>
+      <li>Ruby Scripting Ninja</li>
+      <li>Master pick-pocketter</li>
+    </ul>
   </body>
 </html>
 ```
 
 Save the file. Check it out in your browser.
 
-See the difference? Yes, it's subtle - but the `<h1>`, or main header, is a maroon color.
+See the difference? 
 
 You can change certain elements even if they are not *explicitly* found within the HTML of the page, like the background color.
 
@@ -277,11 +327,11 @@ Update your CSS file:
 
 ```css
 body {
-  background-color: #FFFF00
+  background-color: yellow;
 }
 
-#my-header {
-  color: #660000;
+#heading {
+  color: pink;
 }
 ```
 
@@ -291,7 +341,7 @@ Save. Refresh.
 
 Look back at the CSS file.
 
-1. We have the `#my-header` *selector*, which is associated with the selector in our HTML document, followed by curly braces.
+1. We have the `#heading` *selector*, which is associated with the selector in our HTML document, followed by curly braces.
 2. Inside the curly braces, we have *properties*, which are descriptive words, like font-weight, font-size, or background color. In our case, we have `color`.
 3. *Values* are then assigned to each property, which are preceded by a colon and followed by a semi-colon. [http://cssvalues.com/](http://cssvalues.com/) is an excellent resource for finding the acceptable values given a CSS property. I use this almost everyday.
 
@@ -305,83 +355,71 @@ Margins, padding, and borders are also good properties to go over since they app
 
 ### Putting it all together
 
-1. First, add some selectors to the HTML:
+1. First, let's add a bootstrap stylesheet via a content delivery network, which is a online repository of commonly used Javascript and CSS files. There are a number of free CDNs available. It's a good practice to use a CDN in your production code, as many of the files are pre-cached, so your site will actually load faster.
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My bumblebee website</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <h1 id="my-header">Bees!</h1>
-    <h2>Wonder, wonderful bumblebees</h2>
-    <p>
-      <br/>
-      <img src="http://farm4.staticflickr.com/3775/12059206813_e37135c9cf_z.jpg" width="240" height="180"/>
-      <br>
-    </p>
-    <h2>About the Bumblebee</h2>
-      <h3>(From <a href="http://en.wikipedia.org/wiki/Bumblebee">Wikipedia)</a></h3>
-      <p id="first-paragraph">A bumblebee is any member of the bee genus Bombus, in the family Apidae. There are over 250 known species, existing primarily in the Northern Hemisphere although they also occur in South America. They have been introduced to New Zealand and the Australian state of Tasmania.</p>
-    <br>
-    <h2>Types of Bees:</h2>
-      <ol>
-        <li class="odd">Southern plains bumblebee</li>
-        <li class="even">New garden bumblebee</li>
-        <li class="odd">Early bumblebee</li>
-        <li class="even">Orange-belted bumblebee</li>
-        <li class="odd">Buff-tailed bumblebee or large earth bumblebee</li>
-      </ol>
-  </body>
-</html>
-```
+  Bootstrap, meanwhile, is a powerful front-end framework. You can create a responsive site that looks good on all devices in no time at all. 
 
-Now, let's update the CSS file.
+  Add the link to bootstrap to your HTML.
 
-```html
-/* this is a comment */
+  ```html
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/cyborg/bootstrap.min.css">
+  ```
 
-body {
-  font-family: arial, helvetica, sans-serif;
-  background-color: #FFFF00;
-  max-width: 500px;
-  text-align: center;
-}
+  Take a look at your page. That's just from adding one line of code!
 
-p {
-  line-height: 20px;
-}
+2. Add one selector to the HTML:
 
-h1 {
-  font-style: italic;
-  text-transform: uppercase;
-}
+  ```html
+  <p class="lead">Lord of the Sith</p>
+  ```
 
-#my-header {
-  color: #660000;
-}
+3. Add some dividers:
 
-#first-paragraph {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #000000;
-}
+  ```html
+  <div class="container"></div>
+  <div class="row"></div>
+  <div class="col-md-6">
+  ```
 
+  First, we're adding a a `.container`, which literally contains the all the page content. Then we are using the bootstrap [grid](http://getbootstrap.com/css/#grid) system. See the link for more details. 
 
-.even {
- font-style: italic;
-}
+3. Now, let's update the CSS file.
 
-.odd {
-  color: red;
-}
-```
+  ```html
+  body {
+    background-color: pink;
+    font-family: 'Titillium Web', sans-serif;
+  }
+
+  h1, h2 {
+    font-family: 'Titillium Web', sans-serif;
+  }
+
+  #heading {
+    font-size: 4em;
+    color: pink;
+  }
+
+  .lead {
+    font-style: italic;
+  }
+
+  .container {
+    padding: 50px;
+    max-width: 800px;
+    background-color: black;
+  }
+  ```
+
+  Make sure to add the font to the `<head>`: 
+
+  ```html
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+  ```
 
 Save. Refresh your browser.
 
-What do you think? Good. Bad. Ugly? Change the color of the background and header on your end. The [color picker](http://color.hailpixel.com/) is nice for finding colors. [Update](http://www.flickr.com/) the picture, too, if you want. 
+What do you think? Good. Bad. Ugly? Change the color of the background and header on your end. The [color picker](http://color.hailpixel.com/) is nice for finding colors.
 
 ## Your turn!
 
@@ -389,7 +427,7 @@ While I provide a brief review, work along with me to develop your own basic sit
 
 1. Create a basic HTML page with the doctype, html, head, and body tags
 2. Add a header (H1)
-3. Create an order list
+3. Create an ordered list
 4. Add an external CSS file (make sure to link to the HTML page)
 4. Change the background color and font size
 4. Style the list
@@ -400,9 +438,7 @@ Show it off!
 
 Using Chrome Developer Tools, we can not only view how someone added, for example, a CSS selector to make the HTML text to appear to hoover - but it's also an excellent means of testing either HTML or CSS changes directly from the browser. This can save a lot time
 
-Open up the HTML page we worked on. Right Click on the first paragraph. Select "Inspect Element". Notice the styles on the right side of the Developer Tools pane associated with the paragraph. Do you see the styles associated with the first paragraph? Go ahead and change the size of the border from 2px to 20px: 
-
-![html](/images/devtools.png)
+Open up the HTML page we worked on. Right Click on the first paragraph. Select "Inspect Element". Notice the styles on the right side of the Developer Tools pane associated with the paragraph. Do you see the styles associated with the first paragraph? Go ahead and change the size of the text.
 
 Change the color of the even rows from black to something super cool.
 
